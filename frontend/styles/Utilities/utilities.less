@@ -1,0 +1,29 @@
+.coordinates0(@absolute : true)
+{
+    & when (@absolute = true) {
+        position: absolute;
+    }
+    & when (@absolute = false) {
+        position: fixed;
+    }
+    .fit();
+}
+.fit()
+{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.center()
+{
+    .display(flex);
+    .align-items(center);
+    .justify-content(center);
+}
+
+.hide
+{
+    display: none !important;
+}

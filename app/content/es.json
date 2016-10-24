@@ -1,0 +1,16 @@
+{
+	"settings":{
+		"urlName": "es",
+		"displayName": "español"
+	},
+	"trans":{
+		"example": "Ejemplo",
+		"required": "Obligatorio",
+		"name": "Nombre",
+		"surname": "Apellidos",
+	}
+	"data"{
+		"title": "Título",
+		"text": "Texto"
+	}
+}

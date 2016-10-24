@@ -1,0 +1,16 @@
+{
+	"settings":{
+		"urlName": "cat",
+		"displayName": "català"
+	},
+	"trans":{
+		"example": "Exemple",
+		"required": "Obligatori",
+		"name": "Nom",
+		"surname": "Cognom",
+	}
+	"data"{
+		"title": "Títol",
+		"text": "Texte"
+	}
+}

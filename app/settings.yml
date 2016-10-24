@@ -1,0 +1,20 @@
+database:
+  dev:
+    host: localhost 
+    port: 3306
+    dbname: selecta
+    user: root
+    password: root
+    driver: pdo_mysql
+    charset: utf8
+  prod:
+    host: localhost 
+    port: 3306
+    dbname: nameDataBase
+    user: nameUser
+    password: passwd
+    driver: pdo_mysql
+    charset: utf8
+languages:
+  - en
+  - es

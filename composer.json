@@ -1,0 +1,17 @@
+{
+    "name": "mnt",
+    "authors": [
+        {
+            "name": "CROWD STUDIO",
+            "email": "hello@crowd.st"
+        }
+    ],
+    "require": {
+        "silex/silex": "~2.0.3",
+        "symfony/yaml": "~3.1",
+        "guzzlehttp/guzzle": "~6.2",
+        "zordius/lightncandy": "~0.95",
+        "symfony/asset": "~3.1",
+        "doctrine/dbal": "~2.2"
+    }
+}

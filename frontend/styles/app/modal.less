@@ -1,0 +1,49 @@
+.modal{
+	.center();
+	.coordinates0(false);
+	background:rgba(0,0,0,.7);
+	z-index:200;
+	visibility: hidden;
+	opacity: 0;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+	.transition(opacity .5s, visibility .5s);
+	.modal-inner{
+		max-height: 100vh;
+		text-align: center;
+		margin: 0 auto;
+		padding-left: @padding-inner--small;
+		padding-right: @padding-inner--small;
+
+		.logo
+		{
+			margin-top: 40px;
+		}
+
+		.clickzone{
+			.coordinates0();
+			cursor:pointer;
+			z-index: 0;
+		}
+	&.show{
+		visibility:visible;
+		opacity:1;
+	}
+}
+
+@media @mobile{
+	.modal .modal-inner{
+		padding-left: @padding-inner--medium;
+		padding-right: @padding-inner--medium;
+	}
+}
+@media @tablet{
+	.modal .modal-inner{
+	}
+}
+
+@media @desktop{
+	.modal .modal-inner{
+		.flex(1);
+	}
+}
