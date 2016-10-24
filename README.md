@@ -1,2 +1,2 @@
 # mnt
-Sylex + Marionette + Less skeleton with gulp frontend support
+Yeoman generator skeleton for Sylex + Marionette + Less with gulp frontend support
