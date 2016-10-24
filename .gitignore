@@ -38,19 +38,19 @@ local.properties
 *.launch
 .buildpath
 
-# phpstorm
+# -- phpstorm ----------------------------------------
 .idea/
 
-# textmate
+# -- textmate ----------------------------------------
 *.tmproj
 *.tmproject
 tmtags
 
-# -- Sublimetext --------------------------------------
+# -- Sublimetext -------------------------------------
 /*.sublime-project
 *.sublime-workspace
 
-# -- Netbeans ------------------------------------------
+# -- Netbeans ----------------------------------------
 nbproject/private/
 build/
 nbbuild/
