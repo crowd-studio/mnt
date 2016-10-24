@@ -1,4 +1,13 @@
+# -- Composer -----------------------------------------
 /vendor/
+composer.lock
+
+# -- Bower --------------------------------------------
+/bower_components/
+
+# -- NPM ----------------------------------------------
+/node_modules/
+composer.lock
 
 # -- Frontend -----------------------------------------
 bower_components
@@ -12,13 +21,11 @@ web/_/
 Session.vim
 .netrwhist
 
-# eclipse
+# -- Eclipse ------------------------------------------
 *.pydevproject
 .project
 .metadata
 bin/**
-tmp/**
-tmp/**/*
 *.tmp
 *.bak
 *.swp
@@ -39,11 +46,11 @@ local.properties
 *.tmproject
 tmtags
 
-# sublimetext
+# -- Sublimetext --------------------------------------
 /*.sublime-project
 *.sublime-workspace
 
-# netbeans
+# -- Netbeans ------------------------------------------
 nbproject/private/
 build/
 nbbuild/
@@ -73,6 +80,3 @@ Icon
 ._*
 .Spotlight-V100
 .Trashes
-
-# Composer
-composer.lock

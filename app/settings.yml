@@ -15,6 +15,7 @@ database:
     password: passwd
     driver: pdo_mysql
     charset: utf8
+analytics: UA-XXXXX-Y
 languages:
-  - en
   - es
+  - ca
