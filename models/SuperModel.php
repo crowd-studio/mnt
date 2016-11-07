@@ -3,6 +3,8 @@
 class SuperModel
 {
     protected $database;
+    protected $limit = 6;
+    protected $model = null;
 
     public function __construct($params = false){
         if($params){
@@ -10,6 +12,7 @@ class SuperModel
         }
 
         $this->database = Database::getInstance();
+        $this->model = get_class($this);
     }
 
     private function _factory($params){
@@ -22,11 +25,24 @@ class SuperModel
     }
 
     protected function _getOne($id){
-        return $this->database->fetchOne(get_class($this), $id);
+        return $this->database->fetchOne($this->model, $id);
     }
 
     protected function _getAll(){
-        $model = get_class($this);
-        return $this->database->fetch($this->database->buildQuery($model), $model);
+        $sql = $this->database->buildQuery($this->model);
+
+        return $this->database->fetch($sql, $this->model);
+    }
+
+    protected function _getFiltered($params = []){
+        $sql = $this->database->buildQuery($this->model, $params);
+
+        return $this->database->fetch($sql, $this->model);
+    }
+
+    protected function _getByPage($page, $params = []){
+        $sql = $this->database->buildQuery($this->model, $params);
+
+        return $this->database->fetchPag($sql, $this->model, $page, $this->limit){
     }
 }

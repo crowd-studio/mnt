@@ -6,7 +6,7 @@
  */
 final class Parser
 {
-	protected static $instance = null;
+	protected static $inst = null;
     /**
      * Call this method to get singleton
      *
@@ -14,10 +14,10 @@ final class Parser
      */
     public static function Instance()
     {
-        if ($this->inst === null) {
-            $this->inst = new Parser();
+        if (self::$inst === null) {
+            self::$inst = new Parser();
         }
-        return $this->inst;
+        return self::$inst;
     }
 
     /**

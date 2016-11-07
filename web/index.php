@@ -3,6 +3,11 @@
 require_once __DIR__.'/../vendor/autoload.php';
 require_once __DIR__.'/../controllers/SuperController.php';
 
+require_once __DIR__.'/../interfaces/Cache.php';
+require_once __DIR__.'/../interfaces/Database.php';
+// // require_once __DIR__.'/../interfaces/Parser.php';
+require_once __DIR__.'/../interfaces/Trans.php';
+
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Yaml\Yaml;
@@ -12,11 +17,9 @@ $app = new Silex\Application();
 $app->register(new Silex\Provider\SessionServiceProvider());
 $app->register(new Silex\Provider\SwiftmailerServiceProvider());
 
-
-
 $app->debug = true;
 $app->defaultLanguage = 'es';
-$app->enviroment = 'dev'; // 'prod'
+$app->enviroment = 'dev'; // 'prod';
 
 
 if($app->debug)
@@ -36,6 +39,11 @@ if(isset($app->settings['database'][$app->enviroment])){
     $conn = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
 }
 
+
+Cache::Instance(__DIR__ . '/../tmp/cache');
+Database::Instance($conn);
+// // Parser::Instance();
+Trans::Instance($app->settings['languages']);
 
 // SuperController
 $superController = new SuperController($app);
