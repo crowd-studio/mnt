@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Yaml\Yaml;
 
+
 $app = new Silex\Application();
 
 $app->register(new Silex\Provider\SessionServiceProvider());

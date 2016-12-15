@@ -44,6 +44,24 @@ final class Database
      */
     protected function __clone(){}
 
+
+    public function insert($model, $data){
+        $this->conn->insert($model, $data);
+        $id = $this->conn->fetchAssoc('SELECT MAX(ID) id FROM ' . $model, [])['id'];
+
+        return $id;
+    }
+
+    public function modify($model, $data, $filter){
+        $this->conn->update($model, $data, $filter);
+        return true;
+    }
+
+    public function delete($model, $filter){
+        $this->conn->delete($model, $filter);
+        return true;
+    }
+
     /**
      * Fetch array of objects filtered by provided SQL sentence
      * @param  String $sql    SQL want retrieve from database

@@ -3,6 +3,8 @@
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 
+use LightnCandy\LightnCandy;
+
 class SuperController
 {
     private $app;

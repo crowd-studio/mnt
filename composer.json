@@ -12,6 +12,7 @@
         "guzzlehttp/guzzle": "~6.2",
         "zordius/lightncandy": "~0.95",
         "symfony/asset": "~3.1",
-        "doctrine/dbal": "~2.2"
+        "doctrine/dbal": "~2.2",
+        "zordius/lightncandy": "~0.95"
     }
 }
